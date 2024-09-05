@@ -1,10 +1,7 @@
 package U5W1D4.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Setter
 @Getter
@@ -15,6 +12,7 @@ import lombok.ToString;
 @NoArgsConstructor
 public abstract class Cibo {
     @Id
+    @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
