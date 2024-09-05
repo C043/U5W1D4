@@ -10,6 +10,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class OrderRunner implements CommandLineRunner {
     @Autowired
@@ -26,8 +28,8 @@ public class OrderRunner implements CommandLineRunner {
         try {
             ciboService.saveFood(tomato);
             ciboService.saveFood(cheese);
-            ciboService.saveFood(acqua);
-            ciboService.saveFood(pizzaMargherita);
+            ciboService.saveFood(new Pizza("Pizza Margherita", 1000, 5.00, List.of(ciboService.findByNome("Tomato"),
+                    ciboService.findByNome("Cheese"))));
         } catch (ValidationException e) {
             System.out.println(e.getMessage());
         }
