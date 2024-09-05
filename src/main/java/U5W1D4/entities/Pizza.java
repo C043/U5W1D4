@@ -1,12 +1,17 @@
 package U5W1D4.entities;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
 
 @Getter
 @Setter
+@Entity
+@NoArgsConstructor
 public class Pizza extends Cibo{
     private List<Topping> toppingList;
 
