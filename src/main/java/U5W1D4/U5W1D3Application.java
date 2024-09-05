@@ -1,13 +1,13 @@
-package fragnito.U5W1D4;
+package U5W1D4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class U5W1D4Application {
+public class U5W1D3Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(U5W1D4Application.class, args);
+		SpringApplication.run(U5W1D3Application.class, args);
 	}
 
 }
